@@ -4,9 +4,9 @@
 import tweepy as tpy
 import time as t
 
-# Initialise the class with four parametes which are the keys provided by twitter.
+# Initialise the class with four parameters which are the keys provided by twitter.
 
-class bot:
+class Bot:
     def __init__(self, consumer_key, consumer_secret, access_token, access_token_secret):
         self.auth = tpy.OAuthHandler(consumer_key, consumer_secret)
         self.auth.set_access_token(access_token, access_token_secret)
@@ -100,7 +100,7 @@ class bot:
     def tweet_manually(self, tweet):
         self.api.update_status(tweet)
 
-    # List your message activity, the ones you sent and recieved
+    # List your message activity, the ones you sent and received
 
     def list_message_activity(self):
         messages = self.api.list_direct_messages()
@@ -180,7 +180,7 @@ consumer_secret = ""
 access_token = ""
 acces_token_secret = ""
 
-bot_test = bot(consumer_key, consumer_secret,
+bot_test = Bot(consumer_key, consumer_secret,
                access_token, acces_token_secret)
 
 # To print links on terminal, or generate one to post in other places, the following code may help you!
