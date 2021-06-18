@@ -3,6 +3,7 @@
 #import modules
 import tweepy as tpy
 import time as t
+from tweepy import TweepError
 
 # Initialise the class with four parameters which are the keys provided by twitter.
 
@@ -18,7 +19,7 @@ class Bot:
         try:
             self.api.verify_credentials()
             print("Authentication OK")
-        except:
+        except TweepError:
             print("Error during authentication")
 
     # Retweet latest tweets with the specified keyword, also in specified amount, and like them
@@ -34,7 +35,7 @@ class Bot:
                 if (retweeted == False) and (tweettext.startswith("rt @") == False):
                     self.api.update_status(tweet.full_text)
                     self.api.create_favorite(tweet.id)
-        except:
+        except TweepError:
             print("Make sure your keyword is in a String format and amount is in integer format.",
                   " If they are both correct, make sure the keys you provided are valid with check_validity method")
 
@@ -48,7 +49,7 @@ class Bot:
     def update_image(self, file_name):
         try:
             self.api.update_profile_image(filename = file_name)
-        except:
+        except TweepError:
             print("Your file format should be either GIF, JPEG, or PNG."
                   "Check your file format or make sure your file path is valid. ")
 
@@ -77,7 +78,7 @@ class Bot:
     def follow_users(self, user_name):
         try:
             self.api.create_friendship(user_name)
-        except:
+        except TweepError:
             print('Make sure the username you entered is valid.')
 
     # Print latest tweets a user posted, including yourselves.
@@ -92,7 +93,7 @@ class Bot:
                 timeline = self.api.user_timeline(screen_name = user_name, count=amount)
                 for tweet in timeline:
                     print(f"{tweet.user.name} said {tweet.text}")
-        except:
+        except TweepError:
             print("Check the username you provided.")
 
     # Create a tweet and post it.
@@ -115,7 +116,7 @@ class Bot:
             user = self.api.get_user(user_name)
             user_id = user.id
             self.api.send_direct_message(user_id, message)
-        except:
+        except TweepError:
             print("Check the username you have entered.")
 
     # Block a specified user
@@ -128,7 +129,7 @@ class Bot:
     def unblock_users(self, screen_name):
         try:
             self.api.destroy_block(screen_name=screen_name)
-        except:
+        except TweepError:
             print("Maybe you unblocked this user, "
                   "or the username you entered is invalid. Try again")
 
@@ -144,7 +145,7 @@ class Bot:
     def report_spam(self, screen_name):
         try:
             self.api.report_spam(screen_name=screen_name)
-        except:
+        except TweepError:
             print('Username may not exist, try again.')
 
     # Return information about your profile in a json format
@@ -157,7 +158,7 @@ class Bot:
     def return_users(self, username):
         try:
             return self.api.get_user(screen_name=username)
-        except:
+        except TweepError:
             print('Username may not exist, try again')
 
     # Works the same way as twitter search function. Returns information in json format
@@ -184,7 +185,6 @@ bot_test = Bot(consumer_key, consumer_secret,
                access_token, acces_token_secret)
 
 # To print links on terminal, or generate one to post in other places, the following code may help you!
-# No pip-install required for below code.(Tested with python3)
 
 #Example:
 
