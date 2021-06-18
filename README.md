@@ -9,7 +9,7 @@
 4. How to use this application
 
 ---------------------------------------------
-   ### 1. What is FilmFlick?
+   ### 1. What is a Twitter Bot
 ---------------------------------------------
 <p>Twitter bot is an application where you can use Twitters API to engage with other users, post tweets,
 scrape Twitters data and many more. When it is considered that 15% of twitter users are actually bots, it does not hurt to build
