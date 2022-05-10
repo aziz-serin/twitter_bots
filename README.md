@@ -1,25 +1,14 @@
 #        Twitter Bot        
 
 ---------------------------------------------
-   Contents:
----------------------------------------------
-1. What is a Twitter Bot?
-2. How to install pip3
-3. How to install the required libraries
-4. How to use this application
-
----------------------------------------------
    ### 1. What is a Twitter Bot
 ---------------------------------------------
-<p>Twitter bot is an application where you can use Twitters API to engage with other users, post tweets,
-scrape Twitters data and many more. When it is considered that 15% of twitter users are actually bots, it does not hurt to build
-one for yourself. You can experiment with the provided scripts in this repo and edit and/or use them however you like.</p>
+<p>If you are lazy like me you can use this script to automate some things or just have fun on twitter with your own bot.</p>
 
 ---------------------------------------------
  ### 2. How to install the required libraries
 ---------------------------------------------
-<p>For your convenience, we have provided a requirement.txt file which details the necessary libraries and their versions.
-In you terminal within the root directory of the application (the one with main.py), please enter the following to install the required libraries: 
+<p>You can use below command to install required libraries 
 <br><br>
 pip install -r ./requirements.txt</p>
 
