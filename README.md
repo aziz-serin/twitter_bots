@@ -16,25 +16,7 @@ scrape Twitters data and many more. When it is considered that 15% of twitter us
 one for yourself. You can experiment with the provided scripts in this repo and edit and/or use them however you like.</p>
 
 ---------------------------------------------
- ###  2. How to install pip3
----------------------------------------------
-<p>This application uses some non-standard python 3.8 packages which need to be installed using pip3.
-In the instance where you're unsure if your device has pip3 installed, please continue following this section.
-Alternatively, if your device does have pip3 installed but simply lacks the required libraries, please install them by refering to "3. How to install the required libraries".</p>
-
-<pre>You can check to see if pip3 is installed on your device via:
-Windows:            py -m pip --version
-Unix/macOS:         python -m pip --version
-Linux:              pip3 --version</pre>
-
-<pre>If pip3 is not found, then please install it by referring to the respective link:
-
-For Windows and Unix/macOS:     https://pip.pypa.io/en/stable/installing/
-For Linux Package Manager:      https://packaging.python.org/guides/installing-using-linux-tools/</pre>
-
-
----------------------------------------------
- ### 3. How to install the required libraries
+ ### 2. How to install the required libraries
 ---------------------------------------------
 <p>For your convenience, we have provided a requirement.txt file which details the necessary libraries and their versions.
 In you terminal within the root directory of the application (the one with main.py), please enter the following to install the required libraries: 
@@ -43,7 +25,7 @@ pip install -r ./requirements.txt</p>
 
 
 ---------------------------------------------
-  ### 4. How to use this application
+  ### 3. How to use this application
 ---------------------------------------------
 <p>There are three main files within this repo, them being;
 <br><br>
